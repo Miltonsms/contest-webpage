@@ -2,12 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
- 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
- 	<link rel="shortcut icon" type="image/png" href="img/photo.jpg.png"/>
-
- <!-- Jquery -->
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" type="image/png" href="img/photo.jpg.png"/>
  <!-- Bootstrap core CSS -->
  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
  <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
@@ -90,27 +87,29 @@
 			<div class="col-md-6 formulario">
 				<p>Tell us your story</p>
 				<form class="form-horizontal">
-				  <div class="form-group">
-				      <input type="text" class="form-control" placeholder="Name">
-				  </div>	
-				  <div class="form-group">
-				      <input type="email" class="form-control" placeholder="Email">
-				  </div>
-				  <div class="form-group">
-				      <input type="text" class="form-control" placeholder="Company">
-				  </div>
-				  <div class="form-group">
-				      <textarea class="form-control" rows="3" placeholder="Leave a message"></textarea>
-				  </div>
-				  <div class="form-group">
-				      <button type="submit" class="btn btn-danger btn-lg">Send message</button>
-				  </div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="nameField" placeholder="Name">
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control" id="emailField" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="companyField" placeholder="Company">
+					</div>
+					<div class="form-group">
+						<textarea class="form-control" rows="3" id="messageField" placeholder="Leave a message"></textarea>
+					</div>
+					<div class="form-group">
+						<button onclick="sendTheMail(); return false;" class="btn btn-danger btn-lg">Send message</button>
+					</div>
 				</form>
 			</div><!--Last container close col-md-8-->
 		</div><!--Last container close row-->	
 	</div><!--close of last container-->
-
+	<!--JQuery-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
 	<!--Javascript-->
+	<script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
 	<script src="js/script.js"></script>
 	<!-- Bootstrap -->
 	<script src="bootstrap/js/bootstrap.js"></script>

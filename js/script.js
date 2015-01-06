@@ -1,26 +1,44 @@
 /**
-* Save all the videoId in id
+ * @author First Cognit Team (Frank Sam, Brandon Molina, Sergio Merida, Oscar Cortez, Milton Ramirez)
+ */
+/**
+* Create a variable for the API call parameters
 */
-id = [];
-stringUrl="";
-$(document).ready(function() {
-	$('.dropdown-toggle').dropdown()
-});
+var m = new mandrill.Mandrill('2ZMRx5Wr9KOKm3hCKTfc4Q');
 
-$(document).ready(function($) {
-	$.ajax({
-		url : "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCZIdvJkrCNDjswEeRtMTbN6B9yEiz2pEo&channelId=UCutAQ7OXuxEZ1Cw3ZPmPOZA&part=snippet&maxResults=10&format=json",
-		dataType : "jsonp",
-		success : function(parsed_json) {
+
+/**
+* sendTheMail function that is called when the button is clicked.
+* @param {string} name Variable will save the name input.
+* @param {string} company Variable will save the company input.
+* @param {string} email Variable will save the email input.
+* @param {string} messageString Variable will save the message input.
+* @param {string} messageBody String that will contain all the strings before.
+* @param {object} params Object that will send parameters to mandrill.
+*/
+function sendTheMail() {
 	
-		for (var i = 0; i <= 9; i++) {
-			if (i==9){
-				stringUrl = stringUrl + parsed_json["items"][i]["id"]["videoId"];
-			}else{
-				stringUrl = parsed_json["items"][i]["id"]["videoId"]+ "%2C+" +stringUrl
-			};		
-		};
-		console.log(stringUrl);
+	var name = $("#nameField").val();
+	var company = $("#companyField").val();
+	var email = $("#emailField").val();
+	var messageString = $("#messageField").val();
+	$("#nameField").val("");
+	$("#companyField").val("");
+	$("#emailField").val("");
+	$("#messageField").val("");
+	var messageBody = "Name: " + name + "\nCompany: " + company + "\nMessage:\n\n"+messageString;
+	var params = {
+		"message": {
+			"from_email":email,
+			"to":[{"email":"fsh1991@hotmail.com"}],
+			"subject": "New contact mail",
+			"text": messageBody
 		}
+	};
+
+	m.messages.send(params, function(res) {
+		console.log(JSON.stringify(res));
+	}, function(err) {
+		console.log(JSON.stringify(err));
 	});
-});
+}
