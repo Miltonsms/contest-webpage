@@ -30,7 +30,7 @@ function sendTheMail() {
 	var params = {
 		"message": {
 			"from_email":email,
-			"to":[{"email":"fsh1991@hotmail.com"}],
+			"to":[{"email":"tabarinisergio@gmail.com"}],
 			"subject": "New contact mail",
 			"text": messageBody
 		}
@@ -42,3 +42,12 @@ function sendTheMail() {
 		console.log(JSON.stringify(err));
 	});
 }
+
+$(document).ready(function() {
+    $(function ()  
+      { $("#nameField").popover({content: "Your name."});
+		$("#emailField").popover({content: "Your email."});
+		$("#companyField").popover({content: "Your company."});
+		$("#messageField").popover({content: "Your message."})  
+    });  
+   });
