@@ -14,3 +14,6 @@ Each submission will be evaluated in 3 categories:
 1. Design and responsiveness: how much the design is like the [sketch](/static/cognits_landing-02.png) and how well it adapts to different types of screens.
 2. Follows coding best practices and SEO.
 3. Pagespeed Rank.
+
+
+## http://sergiomerida.github.io/contest-webpage
