@@ -13,19 +13,27 @@
 
 </head>
 <body>
+	
+	<span class="ir-arriba glyphicon glyphicon-chevron-up"></span><!--Scroll button-->
 	<div class="container first">
 		<div class="row">
-			<div class="col-md-3">
+			<div class="container first">
+				<div class="col-xs-6 col-md-6">
 				<img src="static/img/c_iconos.png" class="img-responsive cognits" alt="Responsive image">
-			</div><!--col-md-4-->
-			<div class="col-md-6 title">
+				</div><!--close of first col-md-6-->
+				<div class="col-xs-6 col-md-6">				
+				<img src="static/img/c_fondo1.png" height="300" width="200" class="img-responsive fondo1" alt="Responsive image">
+				</div><!--close of second col-md-6-->
+			</div><!--Close of first container-->
+			<div class="container title">
 				<p>We don't just build software.</p>
 				<p>We build teamwork.</p>
-			</div><!--second col-md-4-->
-			<div class="col-md-3">
-			<img src="static/img/c_fondo1.png" height="300" width="200" class="img-responsive fondo1" alt="Responsive image">
-			<img src="static/img/c_fondo2.png" height="250" width="300" class="img-responsive fondo2" alt="Responsive image">
-			</div><!--third col-md-4-->
+			</div><!--Close of second container-->
+			<div class="container first">
+			<div class="col-xs-8 col-md-12">
+				<img src="static/img/c_fondo2.png" height="250" width="300" class="img-responsive fondo2" alt="Responsive image">
+			</div><!--Close of col-12 inside the third container-->
+			</div><!--Close of third container-->
 		</div><!--row-->
 	</div><!--first container-->
 	
@@ -61,7 +69,7 @@
 			</div><!--Fourth container close col-md-2-->
 			<div class="col-md-8 decide">
 				<img src="static/img/img_idea2.png" align="middle" class="img-responsive decideImg" alt="Responsive image">
-				<p>Time, money or enabled personnel was required with each idea.</br>There was always a new impediment.</p>
+				<p>This company had to decide to let their brilliant ideas die or to form an agil team.</p>
 			</div><!--Fourth container close col-md-8-->
 		</div><!--Fourth container close row-->	
 	</div><!--close of fourth container-->
@@ -84,30 +92,29 @@
 			<div class="col-md-3">
 				<img src="static/img/c_iconos.png" class="img-responsive cognitsLast" alt="Responsive image">
 			</div><!--Last container close col-md-2-->
-			<div class="col-md-6 formulario">
+			<div class="col-xs-12 col-md-6 formulario">
 				<p>Tell us your story</p>
 				<form class="form-horizontal">
 					<div class="form-group">
-						<input type="text" class="form-control" id="nameField" placeholder="Name" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="right">
-					</div>
+						<input type="text" class="form-control" id="nameField" placeholder="Name" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top">
+					</div><!--First close form-group-->
 					<div class="form-group">
-						<input type="email" class="form-control" id="emailField" placeholder="Email" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="right">
-					</div>
+						<input type="email" class="form-control" id="emailField" placeholder="Email" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top">
+					</div><!--Second close form-group-->
 					<div class="form-group">
-						<input type="text" class="form-control" id="companyField" placeholder="Company" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="right">
-					</div>
+						<input type="text" class="form-control" id="companyField" placeholder="Company" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top">
+					</div><!--Third close form-group-->
 					<div class="form-group">
-						<textarea class="form-control" rows="3" id="messageField" placeholder="Leave a message" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="right"></textarea>
-					</div>
+						<textarea class="form-control" rows="3" id="messageField" placeholder="Leave a message" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top"></textarea>
+					</div><!--Fourth close form-group-->
 					<div class="form-group">
 						<button onclick="sendTheMail(); return false;" class="btn btn-danger btn-lg">Send message</button>
-
-
 					</div>
 				</form>
 			</div><!--Last container close col-md-8-->
 		</div><!--Last container close row-->	
 	</div><!--close of last container-->
+
 	<!--JQuery-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
 	<!--Javascript-->

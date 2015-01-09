@@ -6,7 +6,6 @@
 */
 var m = new mandrill.Mandrill('2ZMRx5Wr9KOKm3hCKTfc4Q');
 
-
 /**
 * sendTheMail function that is called when the button is clicked.
 * @param {string} name Variable will save the name input.
@@ -43,6 +42,7 @@ function sendTheMail() {
 	});
 }
 
+
 $(document).ready(function() {
     $(function ()  
       { $("#nameField").popover({content: "Your name."});
@@ -50,4 +50,19 @@ $(document).ready(function() {
 		$("#companyField").popover({content: "Your company."});
 		$("#messageField").popover({content: "Your message."})  
     });  
-   });
+ 
+	$('.ir-arriba').click(function(){
+		$('body, html').animate({
+			scrollTop: '0px'
+		}, 300);
+	});
+ 
+	$(window).scroll(function(){
+		if( $(this).scrollTop() > 0 ){
+			$('.ir-arriba').slideDown(300);
+		} else {
+			$('.ir-arriba').slideUp(300);
+		}
+	});
+ 
+});
